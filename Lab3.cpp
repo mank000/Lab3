@@ -30,9 +30,9 @@ int solution4() {
 	int UserNumber;
 	cin >> UserNumber;
 	switch (UserNumber) {
-	case 5: cout << "отлично\n";
-	case 4: cout << "хорошо\n";
-	case 3: cout << "средне\n";
+	case 5: cout << "отлично\n"; break;
+	case 4: cout << "хорошо\n" ; break;
+	case 3: cout << "средне\n"; break;
 	default: cout << "хуже среднего\n"; break;
 	};
 	return 0;
@@ -40,7 +40,18 @@ int solution4() {
 int main() {
 	cout.precision(15);
 	setlocale(LC_ALL, "ru");
-	cout << solution4();
+	int UserChoise;
+	while (true) {
+		cout << "Здравствуйте, напишите номер подпрограммы, в которую хотите попасть\n(1, 2, 3, 4, а для выхода введите -1)\n";
+		cin >> UserChoise;
+		if (UserChoise == 1) cout << solution1();
+		else if (UserChoise == 2) cout << solution2();
+		else if (UserChoise == 3) cout << solution3();
+		else if (UserChoise == 4) cout << solution4();
+		else if (UserChoise == -1) break;
+		else cout << "Неправильная цифра!";
+		cout << "\n";
+	}
 	return 0;
 }
 
