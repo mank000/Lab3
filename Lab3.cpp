@@ -26,11 +26,21 @@ int solution3() {
 	else if (UserNum > 15) cout << ((pow(UserNum, 2)) - (a * UserNum)) << "\n";
 	return 0;
 }
-
+int solution4() {
+	int UserNumber;
+	cin >> UserNumber;
+	switch (UserNumber) {
+	case 5: cout << "отлично\n";
+	case 4: cout << "хорошо\n";
+	case 3: cout << "средне\n";
+	default: cout << "хуже среднего\n"; break;
+	};
+	return 0;
+}
 int main() {
 	cout.precision(15);
 	setlocale(LC_ALL, "ru");
-	cout << solution3();
+	cout << solution4();
 	return 0;
 }
 
